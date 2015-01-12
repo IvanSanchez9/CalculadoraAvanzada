@@ -7,7 +7,6 @@
 
 package calculadoraavanzada;
 import java.util.Scanner;
-import java.lang.*;
 public class CalculadoraAvanzada {
 
     public static void main(String[] args) {
@@ -27,8 +26,10 @@ public class CalculadoraAvanzada {
             num1=introducir.nextInt();
         }
         else{
-            System.out.print("Introduce el primer numero: ");
+            do{
+            System.out.print("Introduce el numero: ");
             num3=introducir.nextInt();
+            }while(num3<0);
         }
         switch(a){
             case 1:
@@ -40,12 +41,12 @@ public class CalculadoraAvanzada {
             case 3:
                 System.out.print("Introduce el segundo numero: ");
                 num2=introducir.nextInt();
-                res=num1-num2;
-                System.out.println(num1+" - "+num2+" = "+res);
+                res=num1*num2;
+                System.out.println(num1+" * "+num2+" = "+res);
                 break;
             case 5:
                 resultado=Math.sqrt(num3);
-                System.out.println("" );
+                System.out.println("La raiz de "+num3+" es "+resultado);
                 break;
         }
     }
